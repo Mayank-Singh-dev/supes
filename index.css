@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    /* background-color: #f0f0f0; */
+    background: rgba(0, 44, 0, 0.1);
+  }
+  
+  /* container for search input, search button, and random hero button */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #SearchInput {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    width: 300px;
+    margin-right: 10px;
+  }
+  
+  /* search button styling */
+  #SearchButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* random hero button styling */
+  #dg {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  #SearchButton:hover, #dg:hover {
+    background-color: #3e8e41;
+  }
+  
+  .hero-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    margin-left: 45rem;
+  }
+  
+  h2{
+    margin-top: 1rem;
+  }
+  #heroImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  .hero-stats p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  
+  .hero-stats p:nth-child(odd) {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .hero-stats p:nth-child(even) {
+    margin-left: 5px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    #SearchInput {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    
+    #SearchButton, #dg {
+      width: 100%;
+    }
+    
+    .hero-stats p {
+      flex-basis: 100%;
+    }
+    
+    .hero-stats p:nth-child(odd) {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+    
+    .hero-stats p:nth-child(even) {
+      margin-left: 0;
+      margin-bottom: 5px;
+    }
+  }
